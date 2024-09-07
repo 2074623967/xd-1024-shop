@@ -4,7 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d5118a66-1f36-4f5c-85ce-9d2f35955be2" name="Changes" comment="" />
+    <list default="true" id="d5118a66-1f36-4f5c-85ce-9d2f35955be2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-common/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-common/src/main/java/net/xdclass/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-common/src/test/java/org/example/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-common/src/test/java/net/xdclass/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-coupon-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon-service/src/test/java/org/example/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/test/java/net/xdclass/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-gateway/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-gateway/src/main/java/net/xdclass/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-gateway/src/test/java/org/example/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-gateway/src/test/java/net/xdclass/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-order-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-order-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-order-service/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-order-service/src/main/java/net/xdclass/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-order-service/src/test/java/org/example/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-order-service/src/test/java/net/xdclass/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-product-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-product-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-product-service/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-product-service/src/test/java/org/example/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-product-service/src/test/java/net/xdclass/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-user-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-user-service/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-user-service/src/main/java/net/xdclass/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-user-service/src/test/java/org/example/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-user-service/src/test/java/net/xdclass/AppTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,7 +69,7 @@
     "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2443299",
-    "settings.editor.selected.configurable": "MavenSettings",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
