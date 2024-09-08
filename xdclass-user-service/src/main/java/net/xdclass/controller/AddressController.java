@@ -6,6 +6,7 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import net.xdclass.model.AddressDO;
 import net.xdclass.service.AddressService;
+import net.xdclass.utils.JsonData;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -28,10 +29,11 @@ public class AddressController {
 
     @ApiOperation("根据id查询地址详情")
     @GetMapping("find/{address_id}")
-    public AddressDO getDetail(
+    public Object getDetail(
             @ApiParam(value = "地址id", required = true)
             @PathVariable(value = "address_id") String id) {
-        return addressService.getDetail(id);
+        AddressDO addressDO = addressService.getDetail(id);
+        return JsonData.buildSuccess(addressDO);
     }
 }
 
