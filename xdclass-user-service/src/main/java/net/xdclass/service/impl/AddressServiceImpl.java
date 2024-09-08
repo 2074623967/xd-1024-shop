@@ -24,7 +24,7 @@ public class AddressServiceImpl extends ServiceImpl<AddressMapper, AddressDO> im
     private AddressMapper addressMapper;
 
     @Override
-    public AddressDO getDetail(String id) {
+    public AddressDO getDetail(Long id) {
         AddressDO addressDO = addressMapper.selectOne(new QueryWrapper<AddressDO>().eq("id", id));
         return addressDO;
     }

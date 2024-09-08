@@ -31,7 +31,7 @@ public class AddressController {
     @GetMapping("find/{address_id}")
     public Object getDetail(
             @ApiParam(value = "地址id", required = true)
-            @PathVariable(value = "address_id") String id) {
+            @PathVariable(value = "address_id") Long id) {
         AddressDO addressDO = addressService.getDetail(id);
         return JsonData.buildSuccess(addressDO);
     }
