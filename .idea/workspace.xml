@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d5118a66-1f36-4f5c-85ce-9d2f35955be2" name="Changes" comment="项目整合Swagger 多分组，请求头信息增加和响应">
-      <change afterPath="$PROJECT_DIR$/xdclass-common/src/main/java/net/xdclass/enums/BizCodeEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xdclass-common/src/main/java/net/xdclass/utils/JsonData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xdclass-common/src/main/java/net/xdclass/exception/BizException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xdclass-common/src/main/java/net/xdclass/exception/ExceptionHandle.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +112,7 @@
       <option name="presentableId" value="Default" />
       <updated>1725689453436</updated>
       <workItem from="1725689454763" duration="1498000" />
-      <workItem from="1725756043222" duration="1839000" />
+      <workItem from="1725756043222" duration="2769000" />
     </task>
     <task id="LOCAL-00001" summary="项目整合Swagger 多分组，请求头信息增加和响应">
       <created>1725717225904</created>
