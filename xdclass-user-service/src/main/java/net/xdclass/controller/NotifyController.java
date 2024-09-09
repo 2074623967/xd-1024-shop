@@ -4,10 +4,15 @@ import com.google.code.kaptcha.Producer;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
+import net.xdclass.enums.BizCodeEnum;
+import net.xdclass.enums.SendCodeEnum;
+import net.xdclass.service.NotifyService;
 import net.xdclass.utils.CommonUtil;
+import net.xdclass.utils.JsonData;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
@@ -42,6 +47,9 @@ public class NotifyController {
     @Resource
     private StringRedisTemplate stringRedisTemplate;
 
+    @Resource
+    private NotifyService notifyService;
+
     @ApiOperation("获取图形验证码")
     @GetMapping("captcha")
     public void getCaptcha(HttpServletRequest request, HttpServletResponse response) {
@@ -65,6 +73,34 @@ public class NotifyController {
             log.error("获取验证码失败:{}", e);
         }
     }
+
+    /**
+     * 发送验证码
+     * 1. 匹配图形验证码是否正常
+     * 2. 发送验证码
+     * @param to
+     * @param captcha
+     * @param request
+     * @return
+     */
+    @ApiOperation("发送邮箱注册验证码")
+    @GetMapping("send_code")
+    public JsonData sendRegisterCode(@RequestParam(value = "to",required = true) String to,
+                                     @RequestParam(value = "captcha",required = true) String captcha,
+                                     HttpServletRequest request){
+        String key = getCaptchaKey(request);
+        String cacheCaptcha = stringRedisTemplate.opsForValue().get(key);
+        //匹配图形验证码是否一样
+        if(captcha !=null && cacheCaptcha !=null && captcha.equalsIgnoreCase(cacheCaptcha)){
+            //成功
+            stringRedisTemplate.delete(key);
+            JsonData jsonData = notifyService.sendCode(SendCodeEnum.USER_REGISTER,to);
+            return jsonData;
+        }else{
+            return JsonData.buildResult(BizCodeEnum.CODE_CAPTCHA_ERROR);
+        }
+    }
+
 
     /**
      * 获取缓存的key
