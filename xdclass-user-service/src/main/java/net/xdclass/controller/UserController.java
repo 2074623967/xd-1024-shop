@@ -5,13 +5,12 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import net.xdclass.enums.BizCodeEnum;
+import net.xdclass.request.UserRegisterRequest;
 import net.xdclass.service.FileService;
+import net.xdclass.service.UserService;
 import net.xdclass.utils.JsonData;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
-import org.springframework.web.bind.annotation.RequestPart;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.annotation.Resource;
@@ -32,6 +31,9 @@ public class UserController {
     @Resource
     private FileService fileService;
 
+    @Resource
+    private UserService userService;
+
     /**
      * 传用户头像
      * 默认文件大小 1M,超过会报错
@@ -47,5 +49,11 @@ public class UserController {
                 JsonData.buildResult(BizCodeEnum.FILE_UPLOAD_USER_IMG_FAIL);
     }
 
+    @ApiOperation("用户注册")
+    @PostMapping("register")
+    public JsonData register(@ApiParam("用户注册对象") @RequestBody UserRegisterRequest registerRequest){
+        JsonData jsonData = userService.register(registerRequest);
+        return jsonData;
+    }
 }
 

@@ -13,5 +13,10 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface AddressService extends IService<AddressDO> {
 
+    /**
+     * 获取地址明细
+     * @param id
+     * @return
+     */
     AddressDO getDetail(Long id);
 }
