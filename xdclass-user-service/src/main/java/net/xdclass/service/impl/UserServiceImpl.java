@@ -10,7 +10,9 @@ import net.xdclass.model.UserDO;
 import net.xdclass.request.UserRegisterRequest;
 import net.xdclass.service.NotifyService;
 import net.xdclass.service.UserService;
+import net.xdclass.utils.CommonUtil;
 import net.xdclass.utils.JsonData;
+import org.apache.commons.codec.digest.Md5Crypt;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.data.redis.core.StringRedisTemplate;
@@ -66,8 +68,12 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, UserDO> implements 
         BeanUtils.copyProperties(registerRequest, userDO);
         userDO.setCreateTime(new Date());
         userDO.setSlogan("人生需要动态规划，学习需要贪心算法");
-        //设置密码 TODO
-        //账号唯一性检查 TODO
+        //设置密码 生成秘钥 盐
+        userDO.setSecret("$1$" + CommonUtil.getStringNumRandom(8));
+        //密码+盐处理
+        String cryptPwd = Md5Crypt.md5Crypt(registerRequest.getPwd().getBytes(), userDO.getSecret());
+        userDO.setPwd(cryptPwd);
+        //账号唯一性检查
         if (checkUnique(userDO.getMail())) {
             int rows = userMapper.insert(userDO);
             log.info("rows:{},注册成功:{}", rows, userDO);
