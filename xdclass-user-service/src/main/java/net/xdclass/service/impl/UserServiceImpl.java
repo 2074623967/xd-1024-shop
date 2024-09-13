@@ -7,6 +7,7 @@ import net.xdclass.enums.BizCodeEnum;
 import net.xdclass.enums.SendCodeEnum;
 import net.xdclass.mapper.UserMapper;
 import net.xdclass.model.UserDO;
+import net.xdclass.request.UserLoginRequest;
 import net.xdclass.request.UserRegisterRequest;
 import net.xdclass.service.NotifyService;
 import net.xdclass.service.UserService;
@@ -80,8 +81,28 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, UserDO> implements 
             //新用户注册成功，初始化信息，发放福利等 TODO
             userRegisterInitTask(userDO);
             return JsonData.buildSuccess();
-        }else {
+        } else {
             return JsonData.buildResult(BizCodeEnum.ACCOUNT_REPEAT);
+        }
+    }
+
+    @Override
+    public JsonData login(UserLoginRequest userLoginRequest) {
+        //根据邮箱查询账号
+        List<UserDO> list = userMapper.selectList(
+                new QueryWrapper<UserDO>().eq("mail", userLoginRequest.getMail()));
+        if (list != null && list.size() == 1) {
+            UserDO userDO = list.get(0);
+            String cryptPwd = Md5Crypt.md5Crypt(userLoginRequest.getPwd().getBytes(), userDO.getSecret());
+            if (cryptPwd.equals(userDO.getPwd())) {
+                //生成token令牌
+                return JsonData.buildSuccess();
+            }
+            //密码错误
+            return JsonData.buildResult(BizCodeEnum.ACCOUNT_PWD_ERROR);
+        } else {
+            //未注册
+            return JsonData.buildResult(BizCodeEnum.ACCOUNT_UNREGISTER);
         }
     }
 
@@ -99,6 +120,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, UserDO> implements 
 
     /**
      * 用户注册，初始化福利信息 TODO
+     *
      * @param userDO
      */
     private void userRegisterInitTask(UserDO userDO) {
