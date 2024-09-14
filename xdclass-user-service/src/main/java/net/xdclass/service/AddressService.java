@@ -3,6 +3,7 @@ package net.xdclass.service;
 import net.xdclass.model.AddressDO;
 import com.baomidou.mybatisplus.extension.service.IService;
 import net.xdclass.request.AddressAddReqeust;
+import net.xdclass.vo.AddressVO;
 
 /**
  * <p>
@@ -19,4 +20,18 @@ public interface AddressService extends IService<AddressDO> {
      * @param addressAddReqeust
      */
     void add(AddressAddReqeust addressAddReqeust);
+
+    /**
+     * 根据id查找地址详情
+     * @param addressId
+     * @return
+     */
+    AddressVO detail(long addressId);
+
+    /**
+     * 删除指定收货地址
+     * @param addressId
+     * @return
+     */
+    int del(int addressId);
 }
