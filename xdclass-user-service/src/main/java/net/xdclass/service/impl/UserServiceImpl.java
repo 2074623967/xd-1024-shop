@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import lombok.extern.slf4j.Slf4j;
 import net.xdclass.enums.BizCodeEnum;
 import net.xdclass.enums.SendCodeEnum;
+import net.xdclass.interceptor.LoginInterceptor;
 import net.xdclass.mapper.UserMapper;
 import net.xdclass.model.LoginUser;
 import net.xdclass.model.UserDO;
@@ -15,6 +16,7 @@ import net.xdclass.service.UserService;
 import net.xdclass.utils.CommonUtil;
 import net.xdclass.utils.JWTUtil;
 import net.xdclass.utils.JsonData;
+import net.xdclass.vo.UserVO;
 import org.apache.commons.codec.digest.Md5Crypt;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
@@ -98,7 +100,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, UserDO> implements 
             String cryptPwd = Md5Crypt.md5Crypt(userLoginRequest.getPwd().getBytes(), userDO.getSecret());
             if (cryptPwd.equals(userDO.getPwd())) {
                 //生成token令牌
-                LoginUser userDTO = new LoginUser();
+                LoginUser userDTO =LoginUser.builder().build();
                 BeanUtils.copyProperties(userDO, userDTO);
                 String accessToken = JWTUtil.geneJsonWebToken(userDTO);
                 // accessToken
@@ -114,6 +116,22 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, UserDO> implements 
             //未注册
             return JsonData.buildResult(BizCodeEnum.ACCOUNT_UNREGISTER);
         }
+    }
+
+    /**
+     * 查找用户详情
+     * @return
+     */
+    @Override
+    public UserVO findUserDetail() {
+        //从当前线程的ThreadLocal里面获取用户信息
+        LoginUser loginUser = LoginInterceptor.threadLocal.get();
+        //查询用户数据
+        UserDO userDO = userMapper.selectOne(new QueryWrapper<UserDO>().eq("id", loginUser.getId()));
+        UserVO userVO = new UserVO();
+        //值拷贝
+        BeanUtils.copyProperties(userDO, userVO);
+        return userVO;
     }
 
     /**

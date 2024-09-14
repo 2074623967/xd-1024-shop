@@ -13,7 +13,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.math.BigDecimal;
 
 /**
  * 登录拦截器
@@ -44,11 +43,12 @@ public class LoginInterceptor implements HandlerInterceptor {
                 String headImg = (String) claims.get("head_img");
                 String mail = (String) claims.get("mail");
                 String name = (String) claims.get("name");
-                LoginUser loginUser = new LoginUser();
-                loginUser.setId(id);
-                loginUser.setHeadImg(headImg);
-                loginUser.setMail(mail);
-                loginUser.setName(name);
+                LoginUser loginUser = LoginUser.
+                        builder().
+                        id(id).
+                        headImg(headImg).
+                        mail(mail).
+                        name(name).build();
                 //通过attribute传递用户信息
                 //request.setAttribute("loginUser",loginUser);
                 //通过threadLocal传递用户登录信息
