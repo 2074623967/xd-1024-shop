@@ -6,12 +6,14 @@ import lombok.extern.slf4j.Slf4j;
 import net.xdclass.enums.BizCodeEnum;
 import net.xdclass.enums.SendCodeEnum;
 import net.xdclass.mapper.UserMapper;
+import net.xdclass.model.LoginUser;
 import net.xdclass.model.UserDO;
 import net.xdclass.request.UserLoginRequest;
 import net.xdclass.request.UserRegisterRequest;
 import net.xdclass.service.NotifyService;
 import net.xdclass.service.UserService;
 import net.xdclass.utils.CommonUtil;
+import net.xdclass.utils.JWTUtil;
 import net.xdclass.utils.JsonData;
 import org.apache.commons.codec.digest.Md5Crypt;
 import org.apache.commons.lang3.StringUtils;
@@ -96,7 +98,15 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, UserDO> implements 
             String cryptPwd = Md5Crypt.md5Crypt(userLoginRequest.getPwd().getBytes(), userDO.getSecret());
             if (cryptPwd.equals(userDO.getPwd())) {
                 //生成token令牌
-                return JsonData.buildSuccess();
+                LoginUser userDTO = new LoginUser();
+                BeanUtils.copyProperties(userDO, userDTO);
+                String accessToken = JWTUtil.geneJsonWebToken(userDTO);
+                // accessToken
+                // accessToken的过期时间
+                // UUID生成一个token
+                //String refreshToken = CommonUtil.generateUUID();
+                //redisTemplate.opsForValue().set(refreshToken,"1",1000*60*60*24*30);
+                return JsonData.buildSuccess(accessToken);
             }
             //密码错误
             return JsonData.buildResult(BizCodeEnum.ACCOUNT_PWD_ERROR);
