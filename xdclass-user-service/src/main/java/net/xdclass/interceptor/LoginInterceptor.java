@@ -24,6 +24,8 @@ import java.math.BigDecimal;
 @Slf4j
 public class LoginInterceptor implements HandlerInterceptor {
 
+    public static ThreadLocal<LoginUser> threadLocal = new ThreadLocal<>();
+
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         try {
@@ -49,7 +51,8 @@ public class LoginInterceptor implements HandlerInterceptor {
                 loginUser.setName(name);
                 //通过attribute传递用户信息
                 //request.setAttribute("loginUser",loginUser);
-                //通过threadLocal传递用户登录信息 TODO
+                //通过threadLocal传递用户登录信息
+                threadLocal.set(loginUser);
                 return true;
             }
         } catch (Exception e) {
