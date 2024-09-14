@@ -5,6 +5,8 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import net.xdclass.request.AddressAddReqeust;
 import net.xdclass.vo.AddressVO;
 
+import java.util.List;
+
 /**
  * <p>
  * 电商-公司收发货地址表 服务类
@@ -34,4 +36,10 @@ public interface AddressService extends IService<AddressDO> {
      * @return
      */
     int del(int addressId);
+
+    /**
+     * 查询用户的全部收货地址
+     * @return
+     */
+    List<AddressVO> listUserAllAddress();
 }

@@ -16,6 +16,8 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.Date;
+import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * <p>
@@ -87,5 +89,22 @@ public class AddressServiceImpl extends ServiceImpl<AddressMapper, AddressDO> im
         int rows = addressMapper.delete(new QueryWrapper<AddressDO>().eq("id", addressId).
                 eq("user_id", loginUser.getId()));
         return rows;
+    }
+
+    /**
+     * 查询用户的全部收货地址gi
+     * @return
+     */
+    @Override
+    public List<AddressVO> listUserAllAddress() {
+        LoginUser loginUser = LoginInterceptor.threadLocal.get();
+        List<AddressDO> list = addressMapper.selectList(new QueryWrapper<AddressDO>().
+                eq("user_id",loginUser.getId()));
+        List<AddressVO> addressVOList =  list.stream().map(obj->{
+            AddressVO addressVO = new AddressVO();
+            BeanUtils.copyProperties(obj,addressVO);
+            return addressVO;
+        }).collect(Collectors.toList());
+        return addressVOList;
     }
 }

@@ -13,6 +13,7 @@ import net.xdclass.vo.AddressVO;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * <p>
@@ -64,6 +65,13 @@ public class AddressController {
             @PathVariable("address_id")int addressId){
         int rows = addressService.del(addressId);
         return rows == 1 ? JsonData.buildSuccess(): JsonData.buildResult(BizCodeEnum.ADDRESS_DEL_FAIL);
+    }
+
+    @ApiOperation("查询用户的全部收货地址")
+    @GetMapping("/list")
+    public JsonData findUserAllAddress(){
+        List<AddressVO> list = addressService.listUserAllAddress();
+        return JsonData.buildSuccess(list);
     }
 }
 
