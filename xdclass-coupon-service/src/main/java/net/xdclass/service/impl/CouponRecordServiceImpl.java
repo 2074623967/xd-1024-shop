@@ -1,14 +1,14 @@
 package net.xdclass.service.impl;
 
-import net.xdclass.model.CouponRecordDO;
-import net.xdclass.mapper.CouponRecordMapper;
-import net.xdclass.service.CouponRecordService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import net.xdclass.mapper.CouponRecordMapper;
+import net.xdclass.model.CouponRecordDO;
+import net.xdclass.service.CouponRecordService;
 import org.springframework.stereotype.Service;
 
 /**
  * <p>
- *  服务实现类
+ * 服务实现类
  * </p>
  *
  * @author 二当家小D

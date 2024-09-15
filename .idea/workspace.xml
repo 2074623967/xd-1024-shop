@@ -5,10 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d5118a66-1f36-4f5c-85ce-9d2f35955be2" name="Changes" comment="项目整合Swagger 多分组，请求头信息增加和响应">
-      <change afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/config/InterceptorConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xdclass-common/src/main/java/net/xdclass/enums/CouponStateEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-common/src/main/java/net/xdclass/enums/BizCodeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-common/src/main/java/net/xdclass/enums/BizCodeEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/CouponApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/CouponApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/controller/CouponController.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/controller/CouponController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/controller/CouponRecordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/controller/CouponRecordController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/mapper/CouponMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/mapper/CouponMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/mapper/CouponMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/mapper/CouponMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/mapper/CouponRecordMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/mapper/CouponRecordMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/mapper/CouponRecordMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/mapper/CouponRecordMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/model/CouponDO.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/model/CouponDO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/model/CouponRecordDO.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/model/CouponRecordDO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/service/CouponRecordService.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/service/CouponRecordService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/service/CouponService.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/service/CouponService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/service/impl/CouponRecordServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/service/impl/CouponRecordServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/service/impl/CouponServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/service/impl/CouponServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/vo/CouponVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/vo/CouponVO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +31,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Enum" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -183,7 +195,7 @@
       <workItem from="1725841290108" duration="8412000" />
       <workItem from="1726104238417" duration="8899000" />
       <workItem from="1726224373258" duration="2917000" />
-      <workItem from="1726361909692" duration="6729000" />
+      <workItem from="1726361909692" duration="9079000" />
     </task>
     <task id="LOCAL-00001" summary="项目整合Swagger 多分组，请求头信息增加和响应">
       <created>1725717225904</created>
