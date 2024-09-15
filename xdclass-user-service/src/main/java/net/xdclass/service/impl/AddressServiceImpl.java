@@ -92,7 +92,7 @@ public class AddressServiceImpl extends ServiceImpl<AddressMapper, AddressDO> im
     }
 
     /**
-     * 查询用户的全部收货地址gi
+     * 查询用户的全部收货地址
      * @return
      */
     @Override
