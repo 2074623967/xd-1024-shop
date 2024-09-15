@@ -9,9 +9,12 @@ import net.xdclass.model.CouponDO;
 import net.xdclass.mapper.CouponMapper;
 import net.xdclass.service.CouponService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import net.xdclass.utils.JsonData;
 import net.xdclass.vo.CouponVO;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.util.HashMap;
@@ -54,6 +57,18 @@ public class CouponServiceImpl implements CouponService {
         pageMap.put("current_data", couponDOIPage.getRecords().stream().
                 map(this::beanProcess).collect(Collectors.toList()));
         return pageMap;
+    }
+
+    /**
+     * 领取优惠券
+     *
+     * @param couponId
+     * @param promotion
+     * @return
+     */
+    @Override
+    public JsonData addCoupon(long couponId, CouponCategoryEnum promotion) {
+        return JsonData.buildSuccess();
     }
 
     private CouponVO beanProcess(CouponDO couponDO) {
