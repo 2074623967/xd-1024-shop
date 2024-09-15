@@ -5,12 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d5118a66-1f36-4f5c-85ce-9d2f35955be2" name="Changes" comment="项目整合Swagger 多分组，请求头信息增加和响应">
-      <change afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/test/java/net/xdclass/MyBatisPlusGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-coupon-service/src/test/java/net/xdclass/AppTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-user-service/src/main/java/net/xdclass/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-user-service/src/main/java/net/xdclass/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-user-service/src/main/java/net/xdclass/service/impl/AddressServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-user-service/src/main/java/net/xdclass/service/impl/AddressServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xdclass-common/src/main/java/net/xdclass/config/MybatisPlusPageConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xdclass-common/src/main/java/net/xdclass/enums/CouponCategoryEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xdclass-common/src/main/java/net/xdclass/enums/CouponPublishEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/vo/CouponVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/controller/CouponController.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/controller/CouponController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/service/CouponRecordService.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/service/CouponRecordService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/service/CouponService.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/service/CouponService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/service/impl/CouponServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/service/impl/CouponServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,6 +144,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CouponApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="xdclass-coupon-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="net.xdclass.CouponApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UserApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="xdclass-user-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="net.xdclass.UserApplication" />
@@ -178,7 +187,7 @@
       <workItem from="1725841290108" duration="8412000" />
       <workItem from="1726104238417" duration="8899000" />
       <workItem from="1726224373258" duration="2917000" />
-      <workItem from="1726361909692" duration="2820000" />
+      <workItem from="1726361909692" duration="4332000" />
     </task>
     <task id="LOCAL-00001" summary="项目整合Swagger 多分组，请求头信息增加和响应">
       <created>1725717225904</created>

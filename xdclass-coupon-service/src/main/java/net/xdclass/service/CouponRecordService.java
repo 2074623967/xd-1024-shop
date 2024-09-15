@@ -11,6 +11,6 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @author 二当家小D
  * @since 2024-09-15
  */
-public interface CouponRecordService extends IService<CouponRecordDO> {
+public interface CouponRecordService {
 
 }
