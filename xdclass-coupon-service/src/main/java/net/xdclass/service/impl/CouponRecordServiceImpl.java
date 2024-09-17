@@ -49,8 +49,23 @@ public class CouponRecordServiceImpl implements CouponRecordService {
         Map<String, Object> pageMap = new HashMap<>(3);
         pageMap.put("total_record", recordDOPage.getTotal());
         pageMap.put("total_page", recordDOPage.getPages());
-        pageMap.put("current_data", recordDOPage.getRecords().stream().map(obj -> beanProcess(obj)).collect(Collectors.toList()));
+        pageMap.put("current_data", recordDOPage.getRecords().stream().
+                map(obj -> beanProcess(obj)).collect(Collectors.toList()));
         return pageMap;
+    }
+
+    /**
+     * 查询优惠券记录详情
+     * @param recordId
+     * @return
+     */
+    @Override
+    public CouponRecordVO findById(long recordId) {
+        LoginUser loginUser = LoginInterceptor.threadLocal.get();
+        CouponRecordDO couponRecordDO = couponRecordMapper.selectOne(new QueryWrapper<CouponRecordDO>()
+                .eq("id",recordId).eq("user_id",loginUser.getId()));
+        if(couponRecordDO == null ){return null;}
+        return beanProcess(couponRecordDO);
     }
 
     private CouponRecordVO beanProcess(CouponRecordDO couponRecordDO) {
