@@ -26,6 +26,8 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.data.redis.core.script.DefaultRedisScript;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.security.Key;
@@ -96,6 +98,7 @@ public class CouponServiceImpl implements CouponService {
      * @param couponCategory
      * @return
      */
+    @Transactional(rollbackFor=Exception.class,propagation= Propagation.REQUIRED)
     @Override
     public JsonData addCoupon(long couponId, CouponCategoryEnum couponCategory) {
 //        synchronized (this){
