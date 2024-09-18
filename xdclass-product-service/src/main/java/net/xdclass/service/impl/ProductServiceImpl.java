@@ -47,6 +47,12 @@ public class ProductServiceImpl implements ProductService {
         return pageMap;
     }
 
+    @Override
+    public ProductVO findDetailById(long productId) {
+        ProductDO productDO = productMapper.selectById(productId);
+        return beanProcess(productDO);
+    }
+
     private ProductVO beanProcess(ProductDO productDO) {
         ProductVO productVO = new ProductVO();
         BeanUtils.copyProperties(productDO, productVO);
