@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d5118a66-1f36-4f5c-85ce-9d2f35955be2" name="Changes" comment="项目整合Swagger 多分组，请求头信息增加和响应" />
+    <list default="true" id="d5118a66-1f36-4f5c-85ce-9d2f35955be2" name="Changes" comment="项目整合Swagger 多分组，请求头信息增加和响应">
+      <change afterPath="$PROJECT_DIR$/xdclass-product-service/src/test/java/net/xdclass/MyBatisPlusGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-product-service/src/test/java/net/xdclass/AppTest.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -80,7 +83,7 @@
       <recent name="net.xdclass" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.CouponApplication">
+  <component name="RunManager" selected="Application.MyBatisPlusGenerator (2)">
     <configuration name="MyBatisPlusGenerator (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="net.xdclass.MyBatisPlusGenerator" />
       <module name="xdclass-coupon-service" />
@@ -94,12 +97,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MyBatisPlusGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="MyBatisPlusGenerator (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="net.xdclass.MyBatisPlusGenerator" />
-      <module name="xdclass-user-service" />
+      <module name="xdclass-product-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="net.xdclass.AppTest" />
+          <option name="PATTERN" value="net.xdclass.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -161,11 +164,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MyBatisPlusGenerator (2)" />
         <item itemvalue="Spring Boot.UserApplication" />
         <item itemvalue="Application.MyBatisPlusGenerator (1)" />
         <item itemvalue="JUnit.MailTest.testSendMail" />
         <item itemvalue="JUnit.AddressTest.testAddressDetail" />
-        <item itemvalue="Application.MyBatisPlusGenerator" />
       </list>
     </recent_temporary>
   </component>
@@ -185,6 +188,7 @@
       <workItem from="1726361909692" duration="15920000" />
       <workItem from="1726444720739" duration="5008000" />
       <workItem from="1726536596725" duration="6202000" />
+      <workItem from="1726626186659" duration="2428000" />
     </task>
     <task id="LOCAL-00001" summary="项目整合Swagger 多分组，请求头信息增加和响应">
       <created>1725717225904</created>
