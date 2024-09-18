@@ -27,6 +27,10 @@ public class BannerServiceImpl implements BannerService {
     @Resource
     private BannerMapper bannerMapper;
 
+    /**
+     * 轮播图列表接口
+     * @return
+     */
     @Override
     public List<BannerVO> list() {
         List<BannerDO> bannerDOList =  bannerMapper.selectList(new QueryWrapper<BannerDO>().

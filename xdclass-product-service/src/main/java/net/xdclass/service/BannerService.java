@@ -16,5 +16,9 @@ import java.util.List;
  */
 public interface BannerService {
 
+    /**
+     * 轮播图列表接口
+     * @return
+     */
     List<BannerVO> list();
 }
