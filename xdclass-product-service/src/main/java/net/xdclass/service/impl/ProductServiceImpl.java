@@ -1,5 +1,6 @@
 package net.xdclass.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import net.xdclass.mapper.ProductMapper;
@@ -11,6 +12,7 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
@@ -49,6 +51,7 @@ public class ProductServiceImpl implements ProductService {
 
     /**
      * 商品详情
+     *
      * @param productId
      * @return
      */
@@ -56,6 +59,21 @@ public class ProductServiceImpl implements ProductService {
     public ProductVO findDetailById(long productId) {
         ProductDO productDO = productMapper.selectById(productId);
         return beanProcess(productDO);
+    }
+
+    /**
+     * 批量查询商品信息
+     *
+     * @param productIdList
+     * @return
+     */
+    @Override
+    public List<ProductVO> findProductsByIdBatch(List<Long> productIdList) {
+        List<ProductDO> productDOList = productMapper.selectList(new QueryWrapper<ProductDO>()
+                .in("id", productIdList));
+        List<ProductVO> productVOList = productDOList.stream().
+                map(this::beanProcess).collect(Collectors.toList());
+        return productVOList;
     }
 
     private ProductVO beanProcess(ProductDO productDO) {

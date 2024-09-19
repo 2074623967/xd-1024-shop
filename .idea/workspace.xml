@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d5118a66-1f36-4f5c-85ce-9d2f35955be2" name="Changes" comment="项目整合Swagger 多分组，请求头信息增加和响应" />
+    <list default="true" id="d5118a66-1f36-4f5c-85ce-9d2f35955be2" name="Changes" comment="项目整合Swagger 多分组，请求头信息增加和响应">
+      <change beforePath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/controller/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/controller/CartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/service/CartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/service/CartService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/service/impl/CartServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/service/impl/CartServiceImpl.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -198,7 +202,7 @@
       <workItem from="1726707710387" duration="4064000" />
       <workItem from="1726714747315" duration="120000" />
       <workItem from="1726714881640" duration="592000" />
-      <workItem from="1726715486730" duration="1291000" />
+      <workItem from="1726715486730" duration="1705000" />
     </task>
     <task id="LOCAL-00001" summary="项目整合Swagger 多分组，请求头信息增加和响应">
       <created>1725717225904</created>
