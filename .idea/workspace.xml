@@ -4,7 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d5118a66-1f36-4f5c-85ce-9d2f35955be2" name="Changes" comment="项目整合Swagger 多分组，请求头信息增加和响应" />
+    <list default="true" id="d5118a66-1f36-4f5c-85ce-9d2f35955be2" name="Changes" comment="项目整合Swagger 多分组，请求头信息增加和响应">
+      <change afterPath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/controller/CartController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/request/CartItemRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/service/CartService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/service/impl/CartServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-common/src/main/java/net/xdclass/constant/CacheKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-common/src/main/java/net/xdclass/constant/CacheKey.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-common/src/main/java/net/xdclass/enums/BizCodeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-common/src/main/java/net/xdclass/enums/BizCodeEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-coupon-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-product-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-product-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/config/InterceptorConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/config/InterceptorConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/model/ProductDO.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/model/ProductDO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/vo/ProductVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/vo/ProductVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-product-service/src/main/resources/mapper/ProductMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-product-service/src/main/resources/mapper/ProductMapper.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,8 +26,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -44,30 +57,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/ideadaima/xiaodiyun/xdclass-1024-shop/xdclass-product-service/src/main/resources&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2443299&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;4caac7c1839a2fd40465416c5a53185b&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "1.8",
+    "last_opened_file_path": "D:/ideadaima/xiaodiyun/xdclass-1024-shop/xdclass-product-service/src/main/resources",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2443299",
+    "settings.editor.selected.configurable": "MavenSettings",
+    "spring.configuration.checksum": "2b3d6c29f298f088724940fc72fbbe99",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\ideadaima\xiaodiyun\xdclass-1024-shop\xdclass-product-service\src\main\resources" />
@@ -195,7 +208,10 @@
       <workItem from="1726444720739" duration="5008000" />
       <workItem from="1726536596725" duration="6202000" />
       <workItem from="1726626186659" duration="7198000" />
-      <workItem from="1726707710387" duration="760000" />
+      <workItem from="1726707710387" duration="4064000" />
+      <workItem from="1726714747315" duration="120000" />
+      <workItem from="1726714881640" duration="592000" />
+      <workItem from="1726715486730" duration="928000" />
     </task>
     <task id="LOCAL-00001" summary="项目整合Swagger 多分组，请求头信息增加和响应">
       <created>1725717225904</created>
