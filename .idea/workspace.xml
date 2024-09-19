@@ -5,9 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d5118a66-1f36-4f5c-85ce-9d2f35955be2" name="Changes" comment="项目整合Swagger 多分组，请求头信息增加和响应">
-      <change beforePath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/controller/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/controller/CartController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/service/CartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/service/CartService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/service/impl/CartServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/service/impl/CartServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xdclass-common/src/main/java/net/xdclass/enums/ClientType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xdclass-common/src/main/java/net/xdclass/enums/ProductOrderPayTypeEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xdclass-common/src/main/java/net/xdclass/enums/ProductOrderStateEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xdclass-common/src/main/java/net/xdclass/enums/ProductOrderTypeEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xdclass-order-service/src/main/java/net/xdclass/OrderApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xdclass-order-service/src/main/java/net/xdclass/config/InterceptorConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xdclass-order-service/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xdclass-order-service/src/test/java/net/xdclass/MyBatisPlusGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-order-service/src/test/java/net/xdclass/AppTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +64,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "D:/ideadaima/xiaodiyun/xdclass-1024-shop/xdclass-product-service/src/main/resources",
+    "last_opened_file_path": "D:/ideadaima/xiaodiyun/xdclass-1024-shop/xdclass-common/src/main/java/net/xdclass/enums",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -74,10 +80,13 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\ideadaima\xiaodiyun\xdclass-1024-shop\xdclass-common\src\main\java\net\xdclass\enums" />
+      <recent name="D:\ideadaima\xiaodiyun\xdclass-1024-shop\xdclass-order-service\src\main\resources" />
       <recent name="D:\ideadaima\xiaodiyun\xdclass-1024-shop\xdclass-product-service\src\main\resources" />
       <recent name="D:\ideadaima\xiaodiyun\xdclass-1024-shop\xdclass-coupon-service\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\ideadaima\xiaodiyun\xdclass-1024-shop\xdclass-order-service\src\main\resources\mapper" />
       <recent name="D:\ideadaima\xiaodiyun\xdclass-1024-shop\xdclass-product-service\src\main\resources\mapper" />
       <recent name="D:\ideadaima\xiaodiyun\xdclass-1024-shop\xdclass-user-service\src\main\resources\mapper" />
       <recent name="D:\ideadaima\xiaodiyun\xdclass-1024-shop\xdclass-coupon-service\src\main\resources\mapper" />
@@ -86,7 +95,7 @@
       <recent name="net.xdclass" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MyBatisPlusGenerator (2)">
+  <component name="RunManager" selected="Application.MyBatisPlusGenerator">
     <configuration name="MyBatisPlusGenerator (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="net.xdclass.MyBatisPlusGenerator" />
       <module name="xdclass-coupon-service" />
@@ -113,18 +122,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AddressTest.testAddressDetail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="xdclass-user-service" />
+    <configuration name="MyBatisPlusGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="net.xdclass.MyBatisPlusGenerator" />
+      <module name="xdclass-order-service" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="net.xdclass.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="net.xdclass" />
-      <option name="MAIN_CLASS_NAME" value="net.xdclass.AddressTest" />
-      <option name="METHOD_NAME" value="testAddressDetail" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -174,11 +180,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MyBatisPlusGenerator" />
         <item itemvalue="Application.MyBatisPlusGenerator (2)" />
         <item itemvalue="Spring Boot.UserApplication" />
         <item itemvalue="Application.MyBatisPlusGenerator (1)" />
         <item itemvalue="JUnit.MailTest.testSendMail" />
-        <item itemvalue="JUnit.AddressTest.testAddressDetail" />
       </list>
     </recent_temporary>
   </component>
@@ -202,7 +208,7 @@
       <workItem from="1726707710387" duration="4064000" />
       <workItem from="1726714747315" duration="120000" />
       <workItem from="1726714881640" duration="592000" />
-      <workItem from="1726715486730" duration="1705000" />
+      <workItem from="1726715486730" duration="4291000" />
     </task>
     <task id="LOCAL-00001" summary="项目整合Swagger 多分组，请求头信息增加和响应">
       <created>1725717225904</created>
