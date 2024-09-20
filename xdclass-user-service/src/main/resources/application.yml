@@ -26,6 +26,11 @@ spring:
     properties.mail.smtp.starttls.required: true
     properties.mail.smtp.ssl.enable: true
     default-encoding: utf-8
+  cloud:
+    #注册中心地址
+    nacos:
+      discovery:
+        server-addr: 112.74.55.160:8848
 #配置plus打印sql日志
 mybatis-plus:
   configuration:
