@@ -25,7 +25,7 @@ public class CheckUtil {
      * @param email
      * @return
      */
-    public static  boolean isEmail(String email) {
+    public static boolean isEmail(String email) {
         if (null == email || "".equals(email)) {
             return false;
         }
@@ -35,6 +35,7 @@ public class CheckUtil {
 
     /**
      * 暂时未用
+     *
      * @param phone
      * @return
      */

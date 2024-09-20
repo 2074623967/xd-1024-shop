@@ -30,17 +30,17 @@ public class CouponRecordController {
 
     @ApiOperation("分页查询我的优惠券列表")
     @GetMapping("page")
-    public JsonData page(@RequestParam(value = "page",defaultValue = "1")int page,
-                         @RequestParam(value = "size",defaultValue = "20")int size){
-        Map<String,Object> pageInfo = couponRecordService.page(page,size);
+    public JsonData page(@RequestParam(value = "page", defaultValue = "1") int page,
+                         @RequestParam(value = "size", defaultValue = "20") int size) {
+        Map<String, Object> pageInfo = couponRecordService.page(page, size);
         return JsonData.buildSuccess(pageInfo);
     }
 
     @ApiOperation("查询优惠券记录详情")
     @GetMapping("detail/{record_id}")
-    public JsonData getCouponRecordDetail(@ApiParam(value = "记录id")  @PathVariable("record_id") long recordId){
+    public JsonData getCouponRecordDetail(@ApiParam(value = "记录id") @PathVariable("record_id") long recordId) {
         CouponRecordVO couponRecordVO = couponRecordService.findById(recordId);
-        return couponRecordVO == null ? JsonData.buildResult(BizCodeEnum.COUPON_NO_EXITS):
+        return couponRecordVO == null ? JsonData.buildResult(BizCodeEnum.COUPON_NO_EXITS) :
                 JsonData.buildSuccess(couponRecordVO);
     }
 }

@@ -16,14 +16,16 @@ public interface CouponRecordService {
 
     /**
      * 分页查询我的优惠券列表
+     *
      * @param page
      * @param size
      * @return
      */
-    Map<String,Object> page(int page, int size);
+    Map<String, Object> page(int page, int size);
 
     /**
      * 查询优惠券记录详情
+     *
      * @param recordId
      * @return
      */

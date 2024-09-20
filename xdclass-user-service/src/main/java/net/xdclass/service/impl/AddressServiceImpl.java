@@ -1,15 +1,15 @@
 package net.xdclass.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import lombok.extern.slf4j.Slf4j;
 import net.xdclass.enums.AddressStatusEnum;
 import net.xdclass.interceptor.LoginInterceptor;
-import net.xdclass.model.AddressDO;
 import net.xdclass.mapper.AddressMapper;
+import net.xdclass.model.AddressDO;
 import net.xdclass.model.LoginUser;
 import net.xdclass.request.AddressAddReqeust;
 import net.xdclass.service.AddressService;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import net.xdclass.vo.AddressVO;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
@@ -93,16 +93,17 @@ public class AddressServiceImpl extends ServiceImpl<AddressMapper, AddressDO> im
 
     /**
      * 查询用户的全部收货地址
+     *
      * @return
      */
     @Override
     public List<AddressVO> listUserAllAddress() {
         LoginUser loginUser = LoginInterceptor.threadLocal.get();
         List<AddressDO> list = addressMapper.selectList(new QueryWrapper<AddressDO>().
-                eq("user_id",loginUser.getId()));
-        List<AddressVO> addressVOList =  list.stream().map(obj->{
+                eq("user_id", loginUser.getId()));
+        List<AddressVO> addressVOList = list.stream().map(obj -> {
             AddressVO addressVO = new AddressVO();
-            BeanUtils.copyProperties(obj,addressVO);
+            BeanUtils.copyProperties(obj, addressVO);
             return addressVO;
         }).collect(Collectors.toList());
         return addressVOList;

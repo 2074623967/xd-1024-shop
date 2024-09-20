@@ -1,7 +1,5 @@
 package net.xdclass.service;
 
-import net.xdclass.model.ProductOrderDO;
-import com.baomidou.mybatisplus.extension.service.IService;
 import net.xdclass.request.ConfirmOrderRequest;
 import net.xdclass.utils.JsonData;
 

@@ -7,14 +7,13 @@ import net.xdclass.service.BannerService;
 import net.xdclass.utils.JsonData;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 
 /**
  * <p>
- *  前端控制器
+ * 前端控制器
  * </p>
  *
  * @author 二当家小D
@@ -30,7 +29,7 @@ public class BannerController {
 
     @ApiOperation("轮播图列表接口")
     @GetMapping("list")
-    public JsonData list(){
+    public JsonData list() {
         return JsonData.buildSuccess(bannerService.list());
     }
 }

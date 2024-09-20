@@ -78,6 +78,7 @@ public class NotifyController {
      * 发送验证码
      * 1. 匹配图形验证码是否正常
      * 2. 发送验证码
+     *
      * @param to
      * @param captcha
      * @param request
@@ -85,18 +86,18 @@ public class NotifyController {
      */
     @ApiOperation("发送邮箱注册验证码")
     @GetMapping("send_code")
-    public JsonData sendRegisterCode(@RequestParam(value = "to",required = true) String to,
-                                     @RequestParam(value = "captcha",required = true) String captcha,
-                                     HttpServletRequest request){
+    public JsonData sendRegisterCode(@RequestParam(value = "to", required = true) String to,
+                                     @RequestParam(value = "captcha", required = true) String captcha,
+                                     HttpServletRequest request) {
         String key = getCaptchaKey(request);
         String cacheCaptcha = stringRedisTemplate.opsForValue().get(key);
         //匹配图形验证码是否一样
-        if(captcha !=null && cacheCaptcha !=null && captcha.equalsIgnoreCase(cacheCaptcha)){
+        if (captcha != null && cacheCaptcha != null && captcha.equalsIgnoreCase(cacheCaptcha)) {
             //成功
             stringRedisTemplate.delete(key);
-            JsonData jsonData = notifyService.sendCode(SendCodeEnum.USER_REGISTER,to);
+            JsonData jsonData = notifyService.sendCode(SendCodeEnum.USER_REGISTER, to);
             return jsonData;
-        }else{
+        } else {
             return JsonData.buildResult(BizCodeEnum.CODE_CAPTCHA_ERROR);
         }
     }

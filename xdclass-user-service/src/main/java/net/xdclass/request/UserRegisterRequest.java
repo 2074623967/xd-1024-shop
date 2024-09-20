@@ -11,7 +11,7 @@ import lombok.Data;
  * @author tangcj
  * @date 2024/09/12 09:26
  **/
-@ApiModel(value = "用户注册对象",description = "用户注册请求对象")
+@ApiModel(value = "用户注册对象", description = "用户注册请求对象")
 @Data
 public class UserRegisterRequest {
 

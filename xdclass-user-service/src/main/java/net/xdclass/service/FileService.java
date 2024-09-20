@@ -6,8 +6,9 @@ public interface FileService {
 
     /**
      * 头像图片上传
+     *
      * @param file
      * @return
      */
-    String uploadUserHeadImg( MultipartFile file);
+    String uploadUserHeadImg(MultipartFile file);
 }

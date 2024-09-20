@@ -10,7 +10,7 @@ import lombok.Data;
  * @author tangcj
  * @date 2024/09/13 19:49
  **/
-@ApiModel(value = "用户登录对象",description = "用户登录对象")
+@ApiModel(value = "用户登录对象", description = "用户登录对象")
 @Data
 public class UserLoginRequest {
 

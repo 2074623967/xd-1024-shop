@@ -27,10 +27,11 @@ public class SwaggerConfiguration {
 
     /**
      * 对C端用户的接口文档
+     *
      * @return
      */
     @Bean
-    public Docket webApiDoc(){
+    public Docket webApiDoc() {
         return new Docket(DocumentationType.OAS_30)
                 .groupName("用户端接口文档")
                 .pathMapping("/")
@@ -55,10 +56,11 @@ public class SwaggerConfiguration {
 
     /**
      * 对管理端用户的接口文档
+     *
      * @return
      */
     @Bean
-    public Docket adminApiDoc(){
+    public Docket adminApiDoc() {
         return new Docket(DocumentationType.OAS_30)
                 .groupName("管理端接口文档")
                 .pathMapping("/")
@@ -76,6 +78,7 @@ public class SwaggerConfiguration {
 
     /**
      * 生成全局通用参数, 支持配置多个响应参数
+     *
      * @return
      */
     private List<RequestParameter> getGlobalRequestParameters() {
@@ -101,6 +104,7 @@ public class SwaggerConfiguration {
 
     /**
      * 生成通用响应信息
+     *
      * @return
      */
     private List<Response> getGlobalResponseMessage() {

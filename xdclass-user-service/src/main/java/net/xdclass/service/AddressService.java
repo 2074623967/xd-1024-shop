@@ -1,7 +1,7 @@
 package net.xdclass.service;
 
-import net.xdclass.model.AddressDO;
 import com.baomidou.mybatisplus.extension.service.IService;
+import net.xdclass.model.AddressDO;
 import net.xdclass.request.AddressAddReqeust;
 import net.xdclass.vo.AddressVO;
 
@@ -19,12 +19,14 @@ public interface AddressService extends IService<AddressDO> {
 
     /**
      * 新增收货地址
+     *
      * @param addressAddReqeust
      */
     void add(AddressAddReqeust addressAddReqeust);
 
     /**
      * 根据id查找地址详情
+     *
      * @param addressId
      * @return
      */
@@ -32,6 +34,7 @@ public interface AddressService extends IService<AddressDO> {
 
     /**
      * 删除指定收货地址
+     *
      * @param addressId
      * @return
      */
@@ -39,6 +42,7 @@ public interface AddressService extends IService<AddressDO> {
 
     /**
      * 查询用户的全部收货地址
+     *
      * @return
      */
     List<AddressVO> listUserAllAddress();

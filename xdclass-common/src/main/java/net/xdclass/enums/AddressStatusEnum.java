@@ -17,7 +17,7 @@ public enum AddressStatusEnum {
 
     private int status;
 
-    private AddressStatusEnum(int status){
+    private AddressStatusEnum(int status) {
         this.status = status;
     }
 

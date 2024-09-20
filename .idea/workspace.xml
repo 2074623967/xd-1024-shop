@@ -5,14 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d5118a66-1f36-4f5c-85ce-9d2f35955be2" name="Changes" comment="项目整合Swagger 多分组，请求头信息增加和响应">
-      <change afterPath="$PROJECT_DIR$/xdclass-order-service/src/main/java/net/xdclass/request/ConfirmOrderRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-common/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/xdclass-order-service/src/main/java/net/xdclass/controller/ProductOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-order-service/src/main/java/net/xdclass/controller/ProductOrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-order-service/src/main/java/net/xdclass/controller/ProductOrderItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-order-service/src/main/java/net/xdclass/controller/ProductOrderItemController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-order-service/src/main/java/net/xdclass/mapper/ProductOrderItemMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-order-service/src/main/java/net/xdclass/mapper/ProductOrderItemMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-order-service/src/main/java/net/xdclass/mapper/ProductOrderMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-order-service/src/main/java/net/xdclass/mapper/ProductOrderMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-order-service/src/main/java/net/xdclass/model/ProductOrderDO.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-order-service/src/main/java/net/xdclass/model/ProductOrderDO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-order-service/src/main/java/net/xdclass/model/ProductOrderItemDO.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-order-service/src/main/java/net/xdclass/model/ProductOrderItemDO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-order-service/src/main/java/net/xdclass/request/ConfirmOrderRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-order-service/src/main/java/net/xdclass/request/ConfirmOrderRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-order-service/src/main/java/net/xdclass/service/ProductOrderItemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-order-service/src/main/java/net/xdclass/service/ProductOrderItemService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/xdclass-order-service/src/main/java/net/xdclass/service/ProductOrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-order-service/src/main/java/net/xdclass/service/ProductOrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-order-service/src/main/java/net/xdclass/service/impl/ProductOrderItemServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-order-service/src/main/java/net/xdclass/service/impl/ProductOrderItemServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/xdclass-order-service/src/main/java/net/xdclass/service/impl/ProductOrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-order-service/src/main/java/net/xdclass/service/impl/ProductOrderServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-product-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-product-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-user-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-user-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/controller/BannerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/controller/BannerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/controller/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/controller/CartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/mapper/BannerMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/mapper/BannerMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/mapper/ProductMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/mapper/ProductMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/model/BannerDO.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/model/BannerDO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/model/ProductDO.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/model/ProductDO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/request/CartItemRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/request/CartItemRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/service/BannerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/service/BannerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/service/CartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/service/CartService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/service/impl/BannerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/service/impl/BannerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/vo/BannerVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/vo/BannerVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/vo/ProductVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-product-service/src/main/java/net/xdclass/vo/ProductVO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,7 +231,7 @@
       <workItem from="1726714747315" duration="120000" />
       <workItem from="1726714881640" duration="592000" />
       <workItem from="1726715486730" duration="5381000" />
-      <workItem from="1726788162839" duration="3924000" />
+      <workItem from="1726788162839" duration="4227000" />
     </task>
     <task id="LOCAL-00001" summary="项目整合Swagger 多分组，请求头信息增加和响应">
       <created>1725717225904</created>

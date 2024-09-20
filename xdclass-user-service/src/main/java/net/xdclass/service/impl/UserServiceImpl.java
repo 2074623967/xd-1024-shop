@@ -100,7 +100,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, UserDO> implements 
             String cryptPwd = Md5Crypt.md5Crypt(userLoginRequest.getPwd().getBytes(), userDO.getSecret());
             if (cryptPwd.equals(userDO.getPwd())) {
                 //生成token令牌
-                LoginUser userDTO =LoginUser.builder().build();
+                LoginUser userDTO = LoginUser.builder().build();
                 BeanUtils.copyProperties(userDO, userDTO);
                 String accessToken = JWTUtil.geneJsonWebToken(userDTO);
                 // accessToken
@@ -120,6 +120,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, UserDO> implements 
 
     /**
      * 查找用户详情
+     *
      * @return
      */
     @Override

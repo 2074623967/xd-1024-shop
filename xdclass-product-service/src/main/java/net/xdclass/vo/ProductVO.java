@@ -14,7 +14,7 @@ import java.math.BigDecimal;
  **/
 @Data
 @EqualsAndHashCode(callSuper = false)
-public class ProductVO  {
+public class ProductVO {
 
     private Long id;
 

@@ -11,7 +11,7 @@ import lombok.EqualsAndHashCode;
  **/
 @Data
 @EqualsAndHashCode(callSuper = false)
-public class BannerVO  {
+public class BannerVO {
 
 
     private Integer id;

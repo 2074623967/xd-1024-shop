@@ -36,6 +36,7 @@ public interface CouponService {
 
     /**
      * 新用户注册发放优惠券接口
+     *
      * @param newUserCouponRequest
      * @return
      */

@@ -1,7 +1,7 @@
 package net.xdclass.service;
 
-import net.xdclass.model.UserDO;
 import com.baomidou.mybatisplus.extension.service.IService;
+import net.xdclass.model.UserDO;
 import net.xdclass.request.UserLoginRequest;
 import net.xdclass.request.UserRegisterRequest;
 import net.xdclass.utils.JsonData;
@@ -9,7 +9,7 @@ import net.xdclass.vo.UserVO;
 
 /**
  * <p>
- *  服务类
+ * 服务类
  * </p>
  *
  * @author 二当家小D
@@ -19,6 +19,7 @@ public interface UserService extends IService<UserDO> {
 
     /**
      * 注册
+     *
      * @param registerRequest
      * @return
      */
@@ -26,6 +27,7 @@ public interface UserService extends IService<UserDO> {
 
     /**
      * 登录
+     *
      * @param userLoginRequest
      * @return
      */
@@ -33,6 +35,7 @@ public interface UserService extends IService<UserDO> {
 
     /**
      * 查询用户个人信息
+     *
      * @return
      */
     UserVO findUserDetail();

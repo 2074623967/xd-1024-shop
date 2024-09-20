@@ -3,7 +3,7 @@ package net.xdclass.enums;
 /**
  * 优惠劵状态
  */
-public enum  CouponStateEnum {
+public enum CouponStateEnum {
 
     /**
      * 新的可用

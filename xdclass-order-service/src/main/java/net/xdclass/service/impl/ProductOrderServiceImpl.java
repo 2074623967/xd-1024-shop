@@ -1,10 +1,7 @@
 package net.xdclass.service.impl;
 
-import net.xdclass.model.ProductOrderDO;
-import net.xdclass.mapper.ProductOrderMapper;
 import net.xdclass.request.ConfirmOrderRequest;
 import net.xdclass.service.ProductOrderService;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import net.xdclass.utils.JsonData;
 import org.springframework.stereotype.Service;
 

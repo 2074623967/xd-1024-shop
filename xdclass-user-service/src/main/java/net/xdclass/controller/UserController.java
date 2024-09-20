@@ -12,11 +12,9 @@ import net.xdclass.service.UserService;
 import net.xdclass.utils.JsonData;
 import net.xdclass.vo.UserVO;
 import org.springframework.web.bind.annotation.*;
-
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.annotation.Resource;
-import java.util.Map;
 
 /**
  * <p>
@@ -75,11 +73,12 @@ public class UserController {
 
     /**
      * 查询用户个人信息
+     *
      * @return
      */
     @ApiOperation("个人信息查询")
     @GetMapping("detail")
-    public JsonData detail(){
+    public JsonData detail() {
         UserVO userVO = userService.findUserDetail();
         return JsonData.buildSuccess(userVO);
     }

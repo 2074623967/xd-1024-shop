@@ -24,7 +24,7 @@ public class AddressTest {
     private AddressService addressService;
 
     @Test
-    public void testAddressDetail(){
+    public void testAddressDetail() {
 
         AddressDO addressDO = addressService.getDetail(1L);
         log.info(addressDO.toString());

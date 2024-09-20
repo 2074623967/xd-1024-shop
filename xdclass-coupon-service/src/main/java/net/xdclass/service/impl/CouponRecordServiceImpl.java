@@ -3,7 +3,6 @@ package net.xdclass.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import net.xdclass.interceptor.LoginInterceptor;
 import net.xdclass.mapper.CouponRecordMapper;
 import net.xdclass.model.CouponRecordDO;
@@ -34,6 +33,7 @@ public class CouponRecordServiceImpl implements CouponRecordService {
 
     /**
      * 分页查询我的优惠券列表
+     *
      * @param page
      * @param size
      * @return
@@ -44,7 +44,7 @@ public class CouponRecordServiceImpl implements CouponRecordService {
         //第1页，每页2条
         Page<CouponRecordDO> pageInfo = new Page<>(page, size);
         IPage<CouponRecordDO> recordDOPage = couponRecordMapper.selectPage(pageInfo,
-                new QueryWrapper<CouponRecordDO>().eq("user_id",loginUser.getId()).
+                new QueryWrapper<CouponRecordDO>().eq("user_id", loginUser.getId()).
                         orderByDesc("create_time"));
         Map<String, Object> pageMap = new HashMap<>(3);
         pageMap.put("total_record", recordDOPage.getTotal());
@@ -56,6 +56,7 @@ public class CouponRecordServiceImpl implements CouponRecordService {
 
     /**
      * 查询优惠券记录详情
+     *
      * @param recordId
      * @return
      */
@@ -63,14 +64,16 @@ public class CouponRecordServiceImpl implements CouponRecordService {
     public CouponRecordVO findById(long recordId) {
         LoginUser loginUser = LoginInterceptor.threadLocal.get();
         CouponRecordDO couponRecordDO = couponRecordMapper.selectOne(new QueryWrapper<CouponRecordDO>()
-                .eq("id",recordId).eq("user_id",loginUser.getId()));
-        if(couponRecordDO == null ){return null;}
+                .eq("id", recordId).eq("user_id", loginUser.getId()));
+        if (couponRecordDO == null) {
+            return null;
+        }
         return beanProcess(couponRecordDO);
     }
 
     private CouponRecordVO beanProcess(CouponRecordDO couponRecordDO) {
         CouponRecordVO couponRecordVO = new CouponRecordVO();
-        BeanUtils.copyProperties(couponRecordDO,couponRecordVO);
+        BeanUtils.copyProperties(couponRecordDO, couponRecordVO);
         return couponRecordVO;
     }
 }

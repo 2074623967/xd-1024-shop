@@ -64,11 +64,12 @@ public class CouponController {
 
     /**
      * 新用户注册发放优惠券接口
+     *
      * @return
      */
     @ApiOperation("RPC-新用户注册接口")
     @PostMapping("/new_user_coupon")
-    public JsonData addNewUserCoupon( @ApiParam("用户对象") @RequestBody NewUserCouponRequest newUserCouponRequest ){
+    public JsonData addNewUserCoupon(@ApiParam("用户对象") @RequestBody NewUserCouponRequest newUserCouponRequest) {
         JsonData jsonData = couponService.initNewUserCoupon(newUserCouponRequest);
         return jsonData;
     }

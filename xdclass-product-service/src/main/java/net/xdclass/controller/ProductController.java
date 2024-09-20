@@ -42,8 +42,8 @@ public class ProductController {
 
     @ApiOperation("商品详情")
     @GetMapping("/detail/{product_id}")
-    public JsonData detail(@ApiParam(value = "商品id",required = true)
-                               @PathVariable("product_id") long productId){
+    public JsonData detail(@ApiParam(value = "商品id", required = true)
+                           @PathVariable("product_id") long productId) {
         ProductVO productVO = productService.findDetailById(productId);
         return JsonData.buildSuccess(productVO);
     }

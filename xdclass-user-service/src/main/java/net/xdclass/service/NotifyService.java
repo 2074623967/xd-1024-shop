@@ -7,6 +7,7 @@ public interface NotifyService {
 
     /**
      * 发送验证码
+     *
      * @param sendCodeEnum
      * @param to
      * @return
@@ -15,6 +16,7 @@ public interface NotifyService {
 
     /**
      * 校验验证码
+     *
      * @param sendCodeEnum
      * @param to
      * @param code

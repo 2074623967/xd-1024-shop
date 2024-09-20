@@ -1,7 +1,5 @@
 package net.xdclass.constant;
 
-import springfox.documentation.spring.web.json.Json;
-
 /**
  * 缓存key常量类
  *
