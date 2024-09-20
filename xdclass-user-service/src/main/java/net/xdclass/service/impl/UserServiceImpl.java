@@ -5,10 +5,12 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import lombok.extern.slf4j.Slf4j;
 import net.xdclass.enums.BizCodeEnum;
 import net.xdclass.enums.SendCodeEnum;
+import net.xdclass.feign.CouponFeignService;
 import net.xdclass.interceptor.LoginInterceptor;
 import net.xdclass.mapper.UserMapper;
 import net.xdclass.model.LoginUser;
 import net.xdclass.model.UserDO;
+import net.xdclass.request.NewUserCouponRequest;
 import net.xdclass.request.UserLoginRequest;
 import net.xdclass.request.UserRegisterRequest;
 import net.xdclass.service.NotifyService;
@@ -47,6 +49,9 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, UserDO> implements 
 
     @Resource
     private StringRedisTemplate stringRedisTemplate;
+
+    @Resource
+    private CouponFeignService couponFeignService;
 
     /**
      * 用户注册
@@ -153,5 +158,14 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, UserDO> implements 
      * @param userDO
      */
     private void userRegisterInitTask(UserDO userDO) {
+        NewUserCouponRequest request = new NewUserCouponRequest();
+        request.setName(userDO.getName());
+        request.setUserId(userDO.getId());
+        JsonData jsonData = couponFeignService.addNewUserCoupon(request);
+//        if(jsonData.getCode()!=0){
+//            throw new RuntimeException("发放优惠券异常");
+//        }
+        log.info("发放新用户注册优惠券：{},结果:{}", request, jsonData.toString());
+
     }
 }
